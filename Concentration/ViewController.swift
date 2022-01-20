@@ -15,7 +15,21 @@ class ViewController: UIViewController {
     }
 
 
-    //somecode + new somecode
-    //code in new branches functional
+    @IBAction func touchCard(_ sender: UIButton) {
+        print("agh! ghost")
+        
+        flipCard(withEmoji: "👻", on: sender)
+    }
+    
+    func flipCard(withEmoji emoji: String, on button: UIButton) {
+        if button.currentTitle == emoji {
+            button.setTitle("", for: .normal)
+            button.backgroundColor = .orange
+        } else {
+            button.setTitle(emoji, for: .normal)
+            button.backgroundColor = .white
+        }
+    }
+    
 }
 
